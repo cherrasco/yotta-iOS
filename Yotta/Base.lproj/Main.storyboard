@@ -76,12 +76,34 @@
                         <viewControllerLayoutGuide type="top" id="HLg-ZZ-W79"/>
                         <viewControllerLayoutGuide type="bottom" id="eh5-JH-39g"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Uhm-tu-Nww">
+                    <view key="view" contentMode="scaleToFill" id="Uhm-tu-Nww" customClass="DriveView" customModule="Yotta" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmu-Yx-DNQ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" id="qQA-HC-p2v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vmu-Yx-DNQ" firstAttribute="leading" secondItem="Uhm-tu-Nww" secondAttribute="leading" id="RZk-fE-by1"/>
+                            <constraint firstItem="vmu-Yx-DNQ" firstAttribute="top" secondItem="HLg-ZZ-W79" secondAttribute="bottom" placeholder="YES" id="i32-Vu-GVL"/>
+                            <constraint firstItem="eh5-JH-39g" firstAttribute="top" secondItem="vmu-Yx-DNQ" secondAttribute="bottom" id="rxr-lm-n4r"/>
+                            <constraint firstAttribute="trailing" secondItem="vmu-Yx-DNQ" secondAttribute="trailing" id="zCh-5W-vej"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="filledView" destination="vmu-Yx-DNQ" id="7xN-7S-yDJ"/>
+                            <outlet property="filledViewHeight" destination="qQA-HC-p2v" id="r71-tc-F0u"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Driver" id="znf-ZL-LeD" userLabel="Driver"/>
+                    <connections>
+                        <outlet property="driveView" destination="Uhm-tu-Nww" id="e0O-Tc-nGI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neI-jk-UfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

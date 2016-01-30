@@ -10,27 +10,38 @@ import UIKit
 
 class DriverViewController: UIViewController {
 
+    @IBOutlet var driveView: DriveView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = Translate.Color.scaledColor(0.0,isBackground: true)
-
-        // Do any additional setup after loading the view.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "yottaUpdated:", name: Constants.NotificationKey.Drive.Yotta.Updated, object: nil)
+        
+        Driver.sharedInstance.startReloadingYotta()
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: Notification actions
+    func yottaUpdated(sender: NSNotification) {
+        if let yotta : Driver.Yotta = sender.userInfo?["yotta"] as? Driver.Yotta {
+            driveView.setFilledScale(yotta.whole)
+            driveView.setColorScale(yotta.recent)
+        }
     }
-    */
 
 }
