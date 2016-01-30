@@ -29,7 +29,6 @@ class DriverViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureStarted:", name: Constants.NotificationKey.Drive.Yotta.WillStart, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureEnd:", name: Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureReset:", name: Constants.NotificationKey.Drive.Yotta.Reset, object: nil)
-        Driver.sharedInstance.startReloadingYotta()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -41,7 +40,6 @@ class DriverViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // MARK:- Notification actions
     func yottaUpdated(sender: NSNotification) {
@@ -66,7 +64,7 @@ class DriverViewController: UIViewController {
     // MARK:- PrepareForSegue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let driverDetailViewController = segue.destinationViewController as? DriverDetailViewController {
-            driverDetailViewController.view.backgroundColor = self.driveView.filledView.backgroundColor
+            driverDetailViewController.themaColor = self.driveView.filledView.backgroundColor!
         }
     }
 

@@ -11,7 +11,14 @@ import UIKit
 class DriverDetailView: UIView {
 
     @IBOutlet weak var yottaCountLabel: UILabel!
+    @IBOutlet weak var closeButton: UIButton!
     
+    
+    func setThemaColor(color: UIColor) {
+        self.backgroundColor = color
+        self.closeButton.setTitleColor(color, forState: .Normal)
+        
+    }
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

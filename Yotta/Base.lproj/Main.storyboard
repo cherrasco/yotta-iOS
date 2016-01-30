@@ -96,6 +96,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zwf-Ao-7cg" secondAttribute="trailing" id="1KL-mJ-W0c"/>
                             <constraint firstItem="vmu-Yx-DNQ" firstAttribute="leading" secondItem="Uhm-tu-Nww" secondAttribute="leading" id="RZk-fE-by1"/>
@@ -184,9 +185,13 @@
                             <constraint firstAttribute="trailing" secondItem="rqz-41-MSi" secondAttribute="trailing" constant="30" id="u2z-Zt-bID"/>
                         </constraints>
                         <connections>
+                            <outlet property="closeButton" destination="9GU-U7-Bzg" id="cjZ-ad-nG9"/>
                             <outlet property="yottaCountLabel" destination="6iU-pT-42o" id="hky-ha-0b9"/>
                         </connections>
                     </view>
+                    <connections>
+                        <outlet property="driverDetailView" destination="mOP-oV-aT2" id="LwP-dY-Bkr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXU-iv-zdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

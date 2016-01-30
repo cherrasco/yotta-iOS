@@ -16,10 +16,19 @@ class DriverDetailViewController: UIViewController {
         }
     }
     
+    @IBOutlet var driverDetailView: DriverDetailView!
+    
+    var themaColor : UIColor? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let themaColor = themaColor {
+            driverDetailView.setThemaColor(themaColor)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
