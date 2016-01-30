@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let tabBarController = window?.rootViewController as? UITabBarController {
             for viewController in tabBarController.viewControllers! {
                 if let driveViewController = viewController as? DriverViewController {
-                    driveViewController.showAlert()
+                    driveViewController.playYottaSound()
                 }
             }
         }

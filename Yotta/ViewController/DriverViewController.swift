@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class DriverViewController: UIViewController {
 
     @IBOutlet var driveView: DriveView!
     
+    var connection: TCConnection!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         driveView.setMaskLayer()
@@ -45,5 +48,22 @@ class DriverViewController: UIViewController {
             driveView.animateWaveLayer()
         }
         driveView.animateDropText()
+
+    internal func playYottaSound() {
+        let alert = UIAlertView()
+        alert.title = "Yotta"
+        alert.message = "酔った!!!!!!"
+        alert.addButtonWithTitle("OK")
+        alert.show()
+
+        Alamofire.request(.POST, "http://52.68.60.142/yotta-server/token_sample.php", parameters: nil).responseJSON(completionHandler: { response in
+            if let result = response.result.value as? NSDictionary, status = result["status"] as? String, token = result["token"] as? String {
+                let device = TCDevice(capabilityToken: token, delegate: nil)
+                print(device)
+                self.connection = device.connect(nil, delegate: nil)
+            } else {
+                print("Failed.")
+            }
+        })
     }
 }

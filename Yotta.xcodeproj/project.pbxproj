@@ -56,6 +56,7 @@
 		BF34EE361C5C8B6300EBB126 /* YottaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YottaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF34EE3A1C5C8B6300EBB126 /* YottaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YottaUITests.swift; sourceTree = "<group>"; };
 		BF34EE3C1C5C8B6300EBB126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF34EE481C5D1A1700EBB126 /* Yotta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yotta-Bridging-Header.h"; sourceTree = "<group>"; };
 		E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5133261C5CA192003955F5 /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverViewController.swift; path = ViewController/DriverViewController.swift; sourceTree = "<group>"; };
 		EF5133281C5CA1AA003955F5 /* YotterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterViewController.swift; path = ViewController/YotterViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +145,7 @@
 				BF34EE211C5C8B6200EBB126 /* Assets.xcassets */,
 				BF34EE231C5C8B6200EBB126 /* LaunchScreen.storyboard */,
 				BF34EE261C5C8B6200EBB126 /* Info.plist */,
+				BF34EE481C5D1A1700EBB126 /* Yotta-Bridging-Header.h */,
 			);
 			path = Yotta;
 			sourceTree = "<group>";
@@ -468,6 +470,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -512,6 +515,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -541,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.Yotta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yotta/Yotta-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -556,6 +561,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.Yotta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yotta/Yotta-Bridging-Header.h";
 			};
 			name = Release;
 		};

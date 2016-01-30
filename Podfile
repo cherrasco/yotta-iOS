@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Yotta' do
   pod 'Alamofire'
+	pod 'TwilioSDK', '~> 1.2'
 end
 
 target 'YottaTests' do
