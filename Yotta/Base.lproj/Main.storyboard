@@ -55,6 +55,7 @@
                         </constraints>
                         <connections>
                             <outlet property="yottaButton" destination="7Rk-Cy-kmt" id="NMW-c7-pOE"/>
+                            <outlet property="yottaCenterX" destination="vcr-K1-eea" id="TeZ-N9-UIz"/>
                             <outlet property="yottaLabel" destination="cTH-Ne-rgx" id="Kh0-iA-UL1"/>
                             <outlet property="yottaMargin" destination="BZa-ap-vs7" id="Zmc-eb-yB7"/>
                         </connections>
