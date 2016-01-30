@@ -113,11 +113,55 @@
                     <tabBarItem key="tabBarItem" title="Driver" id="znf-ZL-LeD" userLabel="Driver"/>
                     <connections>
                         <outlet property="driveView" destination="Uhm-tu-Nww" id="e0O-Tc-nGI"/>
+                        <segue destination="gWY-gT-aKc" kind="presentation" identifier="kSegueIdentifierDriverShowDetail" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="fNj-Wf-B3z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neI-jk-UfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-126" y="-129"/>
+        </scene>
+        <!--Driver Detail View Controller-->
+        <scene sceneID="AX5-wa-pbu">
+            <objects>
+                <viewController id="gWY-gT-aKc" customClass="DriverDetailViewController" customModule="Yotta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LQY-6Z-lqG"/>
+                        <viewControllerLayoutGuide type="bottom" id="VGf-Vj-jQV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mOP-oV-aT2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GU-U7-Bzg">
+                                <rect key="frame" x="260" y="440" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="T4m-l8-ZK1"/>
+                                    <constraint firstAttribute="height" constant="80" id="vJv-eL-7th"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="close">
+                                    <color key="titleColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTouchUpInside:" destination="gWY-gT-aKc" eventType="touchUpInside" id="Ryd-zj-FtR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9GU-U7-Bzg" firstAttribute="centerX" secondItem="mOP-oV-aT2" secondAttribute="centerX" id="2N9-6h-4Sd"/>
+                            <constraint firstItem="VGf-Vj-jQV" firstAttribute="top" secondItem="9GU-U7-Bzg" secondAttribute="bottom" constant="80" id="qmg-xR-w8I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXU-iv-zdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586" y="-129"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Qfr-ec-xSg">

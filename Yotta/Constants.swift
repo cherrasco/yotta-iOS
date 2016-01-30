@@ -31,8 +31,16 @@ class Constants {
     struct NotificationKey {
         struct Drive {
             struct Yotta {
+                static let WillStart = "kNotificationKeyDriveYottaWillStart"
+                static let WillEnd = "kNotificationKeyDriveYottaWillEnd"
                 static let Updated = "kNotificationKeyDriveYottaUpdated"
+                static let Reset = "kNotificationKeyDriveYottaReset"
             }
+        }
+    }
+    struct SegueIdentifier {
+        struct Driver {
+            static let ShowDetail = "kSegueIdentifierDriverShowDetail"
         }
     }
 }

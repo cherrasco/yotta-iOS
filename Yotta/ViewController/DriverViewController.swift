@@ -26,6 +26,9 @@ class DriverViewController: UIViewController {
         super.viewDidAppear(animated)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "yottaUpdated:", name: Constants.NotificationKey.Drive.Yotta.Updated, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureStarted:", name: Constants.NotificationKey.Drive.Yotta.WillStart, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureEnd:", name: Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureReset:", name: Constants.NotificationKey.Drive.Yotta.Reset, object: nil)
         
         Driver.sharedInstance.startReloadingYotta()
         
@@ -42,14 +45,32 @@ class DriverViewController: UIViewController {
     }
     
     
-    // MARK: Notification actions
+    // MARK:- Notification actions
     func yottaUpdated(sender: NSNotification) {
         if let yotta : Driver.Yotta = sender.userInfo?["yotta"] as? Driver.Yotta {
             driveView.setFilledScale(yotta.whole)
             driveView.setColorScale(yotta.recent)
             driveView.animateWaveLayer()
+            driveView.animateDropText()
         }
-        driveView.animateDropText()
+    }
+    func measureStarted(sender: NSNotification) {
+        Driver.sharedInstance.startReloadingYotta()
+    }
+    func measureEnd(sender: NSNotification) {
+        Driver.sharedInstance.stopReloadingYotta()
+        driveView.completionLayout {
+            self.performSegueWithIdentifier(Constants.SegueIdentifier.Driver.ShowDetail, sender: nil)
+        }
+    }
+    func measureReset(sender: NSNotification) {
+        driveView.resetLayout()
+    }
+    // MARK:- PrepareForSegue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let driverDetailViewController = segue.destinationViewController as? DriverDetailViewController {
+            driverDetailViewController.view.backgroundColor = self.driveView.filledView.backgroundColor
+        }
     }
 
     internal func playYottaSound() {

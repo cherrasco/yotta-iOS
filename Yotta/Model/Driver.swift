@@ -23,7 +23,7 @@ class Driver: NSObject {
     
     var yotta = Yotta() {
         didSet {
-            NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Updated, object: nil,userInfo: ["yotta":yotta])
+            NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil,userInfo: ["yotta":yotta])
         }
     }
     
@@ -43,7 +43,7 @@ class Driver: NSObject {
             reloadTimer = NSTimer(timeInterval: Constants.Time.Yotter.Reload.Interval, target: NSBlockOperation(block: {
                 self.loadYotta()
             }), selector: "main", userInfo: nil, repeats: true)
-            reloadTimer?.fire()
+            //reloadTimer?.fire()
             NSRunLoop.currentRunLoop().addTimer(reloadTimer!, forMode: NSRunLoopCommonModes)
             
         }

@@ -47,6 +47,41 @@ class DriveView: UIView {
             waveView.layer.mask = maskLayer
         }
     }
+    func completionLayout(completionHandler: (()->Void)? = nil) {
+        
+        // animate wave
+        let animation = CABasicAnimation(keyPath: "position.x")
+        animation.fromValue = maskLayer!.position.x
+        animation.toValue = maskLayer!.position.x-190.0
+        animation.duration = 0.5
+        maskLayer?.addAnimation(animation, forKey: "position.x")
+        
+        // filled scale
+        filledViewHeight.constant = self.bounds.height*1.0
+        UIView.animateWithDuration(0.5) {
+            self.layoutIfNeeded()
+            
+            if let completionHandler = completionHandler {
+                completionHandler()
+            }
+        }
+    }
+    func resetLayout() {
+        
+        // animate wave
+        let animation = CABasicAnimation(keyPath: "position.x")
+        animation.fromValue = maskLayer!.position.x
+        animation.toValue = maskLayer!.position.x-190.0
+        animation.duration = 0.5
+        maskLayer?.addAnimation(animation, forKey: "position.x")
+        
+        // filled scale
+        filledViewHeight.constant = self.bounds.height*0.0
+        UIView.animateWithDuration(0.5) {
+            self.layoutIfNeeded()
+        }
+
+    }
     
     // MARK:- Methods Animate Layer
     func animateWaveLayer() {
