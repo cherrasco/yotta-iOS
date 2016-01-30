@@ -50,6 +50,7 @@ class DriverViewController: UIViewController {
             driveView.animateWaveLayer()
         }
         driveView.animateDropText()
+    }
 
     internal func playYottaSound() {
         audioPlayer.playYottaSound()
