@@ -14,6 +14,7 @@ class DriverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        driveView.setMaskLayer()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -41,6 +42,7 @@ class DriverViewController: UIViewController {
         if let yotta : Driver.Yotta = sender.userInfo?["yotta"] as? Driver.Yotta {
             driveView.setFilledScale(yotta.whole)
             driveView.setColorScale(yotta.recent)
+            driveView.animateWaveLayer()
         }
     }
 
