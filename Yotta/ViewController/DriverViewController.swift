@@ -46,5 +46,4 @@ class DriverViewController: UIViewController {
         }
         driveView.animateDropText()
     }
-
 }

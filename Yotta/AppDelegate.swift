@@ -45,13 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
-
-        let alert = UIAlertView()
-        alert.title = "Yotta"
-        alert.message = "酔った!!!!!!"
-        alert.addButtonWithTitle("OK")
-        alert.show()
-
+        
+        if let tabBarController = window?.rootViewController as? UITabBarController {
+            for viewController in tabBarController.viewControllers! {
+                if let driveViewController = viewController as? DriverViewController {
+                    driveViewController.showAlert()
+                }
+            }
+        }
+        
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
 
         completionHandler(UIBackgroundFetchResult.NewData)
