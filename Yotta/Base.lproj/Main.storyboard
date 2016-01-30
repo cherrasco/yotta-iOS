@@ -35,14 +35,28 @@
                                     <action selector="buttonTouchUpInside:" destination="dWT-gF-RnE" eventType="touchUpInside" id="LsP-9L-doh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yotta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-Ne-rgx">
+                                <rect key="frame" x="200" y="145" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5Sh-pL-PmT"/>
+                                    <constraint firstAttribute="width" constant="200" id="KeC-W9-a62"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7Rk-Cy-kmt" firstAttribute="top" secondItem="cTH-Ne-rgx" secondAttribute="bottom" constant="5" id="BZa-ap-vs7"/>
                             <constraint firstItem="7Rk-Cy-kmt" firstAttribute="centerY" secondItem="ghS-GU-X6Z" secondAttribute="centerY" id="QUZ-pW-eF7"/>
+                            <constraint firstItem="cTH-Ne-rgx" firstAttribute="centerX" secondItem="ghS-GU-X6Z" secondAttribute="centerX" id="lfH-CB-KiI"/>
                             <constraint firstItem="7Rk-Cy-kmt" firstAttribute="centerX" secondItem="ghS-GU-X6Z" secondAttribute="centerX" id="vcr-K1-eea"/>
                         </constraints>
                         <connections>
                             <outlet property="yottaButton" destination="7Rk-Cy-kmt" id="NMW-c7-pOE"/>
+                            <outlet property="yottaLabel" destination="cTH-Ne-rgx" id="Kh0-iA-UL1"/>
+                            <outlet property="yottaMargin" destination="BZa-ap-vs7" id="Zmc-eb-yB7"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Yotter" id="BZ9-qb-xGz" userLabel="Yotter"/>
