@@ -44,6 +44,7 @@ class DriverViewController: UIViewController {
             driveView.setColorScale(yotta.recent)
             driveView.animateWaveLayer()
         }
+        driveView.animateDropText()
     }
 
 }

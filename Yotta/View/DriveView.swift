@@ -56,5 +56,24 @@ class DriveView: UIView {
         animation.duration = Constants.Time.DriverView.Animation.Duration
         maskLayer?.addAnimation(animation, forKey: "position.x")
     }
+    func animateDropText() {
+        let textLayer = CATextLayer()
+        textLayer.string = "Yotta"
+        textLayer.font = UIFont.boldSystemFontOfSize(30)
+        textLayer.foregroundColor = self.filledView.backgroundColor?.CGColor
+        textLayer.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        textLayer.position.x = self.bounds.width*CGFloat(Double(arc4random()) / Double(UINT32_MAX))
+        self.layer.insertSublayer(textLayer, below: filledView.layer)
+        
+        let dropAnimation = CABasicAnimation(keyPath: "position.y")
+        dropAnimation.fromValue = 0.0
+        dropAnimation.toValue = self.bounds.height
+        dropAnimation.duration = 2.0
+        dropAnimation.removedOnCompletion = false
+        dropAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.455, 0.03, 0.515, 0.955)
+        dropAnimation.fillMode = kCAFillModeForwards
+        textLayer.addAnimation(dropAnimation, forKey: "position.y")
+        
+    }
     
 }
