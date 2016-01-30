@@ -13,6 +13,10 @@
 		BF34EE251C5C8B6200EBB126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE231C5C8B6200EBB126 /* LaunchScreen.storyboard */; };
 		BF34EE301C5C8B6300EBB126 /* YottaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE2F1C5C8B6300EBB126 /* YottaTests.swift */; };
 		BF34EE3B1C5C8B6300EBB126 /* YottaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE3A1C5C8B6300EBB126 /* YottaUITests.swift */; };
+		BF34EE4A1C5D302700EBB126 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF34EE491C5D302700EBB126 /* AVFoundation.framework */; };
+		BF34EE4C1C5D30E600EBB126 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF34EE4B1C5D30E600EBB126 /* AudioToolbox.framework */; };
+		BF34EE4F1C5D43FB00EBB126 /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */; };
+		BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */; };
 		C52417545C3FD88CC084F291 /* Pods_Yotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */; };
 		EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133261C5CA192003955F5 /* DriverViewController.swift */; };
 		EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133281C5CA1AA003955F5 /* YotterViewController.swift */; };
@@ -57,6 +61,10 @@
 		BF34EE3A1C5C8B6300EBB126 /* YottaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YottaUITests.swift; sourceTree = "<group>"; };
 		BF34EE3C1C5C8B6300EBB126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF34EE481C5D1A1700EBB126 /* Yotta-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yotta-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF34EE491C5D302700EBB126 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BF34EE4B1C5D30E600EBB126 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
+		BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YottaSoundPlayer.swift; sourceTree = "<group>"; };
 		E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5133261C5CA192003955F5 /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverViewController.swift; path = ViewController/DriverViewController.swift; sourceTree = "<group>"; };
 		EF5133281C5CA1AA003955F5 /* YotterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterViewController.swift; path = ViewController/YotterViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF34EE4C1C5D30E600EBB126 /* AudioToolbox.framework in Frameworks */,
+				BF34EE4A1C5D302700EBB126 /* AVFoundation.framework in Frameworks */,
 				C52417545C3FD88CC084F291 /* Pods_Yotta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +116,8 @@
 		BF11689AC0041CCDA39262B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF34EE4B1C5D30E600EBB126 /* AudioToolbox.framework */,
+				BF34EE491C5D302700EBB126 /* AVFoundation.framework */,
 				E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */,
 			);
 			name = Frameworks;
@@ -136,6 +148,7 @@
 		BF34EE191C5C8B6200EBB126 /* Yotta */ = {
 			isa = PBXGroup;
 			children = (
+				BF34EE4D1C5D43DE00EBB126 /* sounds */,
 				EF51332A1C5CA5D9003955F5 /* View */,
 				EF5133251C5C9F85003955F5 /* ViewController */,
 				EFDBD6991C5C9815000F43DF /* Model */,
@@ -168,6 +181,14 @@
 			path = YottaUITests;
 			sourceTree = "<group>";
 		};
+		BF34EE4D1C5D43DE00EBB126 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		EF5133251C5C9F85003955F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +213,7 @@
 				EF5133361C5CE87F003955F5 /* Driver.swift */,
 				EFDBD69A1C5C9840000F43DF /* Yotter.swift */,
 				EF51332E1C5CB26D003955F5 /* Translate.swift */,
+				BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF34EE251C5C8B6200EBB126 /* LaunchScreen.storyboard in Resources */,
+				BF34EE4F1C5D43FB00EBB126 /* punch.mp3 in Resources */,
 				BF34EE221C5C8B6200EBB126 /* Assets.xcassets in Resources */,
 				BF34EE201C5C8B6200EBB126 /* Main.storyboard in Resources */,
 			);
@@ -388,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF51332F1C5CB26D003955F5 /* Translate.swift in Sources */,
+				BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */,
 				EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */,
 				EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */,
 				EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */,
