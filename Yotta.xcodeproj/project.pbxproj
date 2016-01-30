@@ -17,7 +17,7 @@
 		EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133261C5CA192003955F5 /* DriverViewController.swift */; };
 		EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133281C5CA1AA003955F5 /* YotterViewController.swift */; };
 		EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51332B1C5CA5F4003955F5 /* YotterView.swift */; };
-		EF51332F1C5CB26D003955F5 /* CustomHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51332E1C5CB26D003955F5 /* CustomHelper.swift */; };
+		EF51332F1C5CB26D003955F5 /* Translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51332E1C5CB26D003955F5 /* Translate.swift */; };
 		EF5133311C5CB3BA003955F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133301C5CB3BA003955F5 /* Constants.swift */; };
 		EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBD69A1C5C9840000F43DF /* Yotter.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		EF5133261C5CA192003955F5 /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverViewController.swift; path = ViewController/DriverViewController.swift; sourceTree = "<group>"; };
 		EF5133281C5CA1AA003955F5 /* YotterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterViewController.swift; path = ViewController/YotterViewController.swift; sourceTree = "<group>"; };
 		EF51332B1C5CA5F4003955F5 /* YotterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterView.swift; path = View/YotterView.swift; sourceTree = "<group>"; };
-		EF51332E1C5CB26D003955F5 /* CustomHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHelper.swift; sourceTree = "<group>"; };
+		EF51332E1C5CB26D003955F5 /* Translate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translate.swift; sourceTree = "<group>"; };
 		EF5133301C5CB3BA003955F5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EFDBD69A1C5C9840000F43DF /* Yotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EFDBD69A1C5C9840000F43DF /* Yotter.swift */,
-				EF51332E1C5CB26D003955F5 /* CustomHelper.swift */,
+				EF51332E1C5CB26D003955F5 /* Translate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF51332F1C5CB26D003955F5 /* CustomHelper.swift in Sources */,
+				EF51332F1C5CB26D003955F5 /* Translate.swift in Sources */,
 				EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */,
 				EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */,
 				EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */,
