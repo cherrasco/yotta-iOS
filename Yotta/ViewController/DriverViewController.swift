@@ -12,6 +12,7 @@ class DriverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = Translate.Color.scaledColor(0.0,isBackground: true)
 
         // Do any additional setup after loading the view.
     }
