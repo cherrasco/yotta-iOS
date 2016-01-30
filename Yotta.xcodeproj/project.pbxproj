@@ -16,6 +16,7 @@
 		C52417545C3FD88CC084F291 /* Pods_Yotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */; };
 		EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133261C5CA192003955F5 /* DriverViewController.swift */; };
 		EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133281C5CA1AA003955F5 /* YotterViewController.swift */; };
+		EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51332B1C5CA5F4003955F5 /* YotterView.swift */; };
 		EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBD69A1C5C9840000F43DF /* Yotter.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5133261C5CA192003955F5 /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverViewController.swift; path = ViewController/DriverViewController.swift; sourceTree = "<group>"; };
 		EF5133281C5CA1AA003955F5 /* YotterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterViewController.swift; path = ViewController/YotterViewController.swift; sourceTree = "<group>"; };
+		EF51332B1C5CA5F4003955F5 /* YotterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterView.swift; path = View/YotterView.swift; sourceTree = "<group>"; };
 		EFDBD69A1C5C9840000F43DF /* Yotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 		BF34EE191C5C8B6200EBB126 /* Yotta */ = {
 			isa = PBXGroup;
 			children = (
+				EF51332A1C5CA5D9003955F5 /* View */,
 				EF5133251C5C9F85003955F5 /* ViewController */,
 				EFDBD6991C5C9815000F43DF /* Model */,
 				BF34EE1A1C5C8B6200EBB126 /* AppDelegate.swift */,
@@ -161,6 +164,14 @@
 				EF5133281C5CA1AA003955F5 /* YotterViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		EF51332A1C5CA5D9003955F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF51332B1C5CA5F4003955F5 /* YotterView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		EFDBD6991C5C9815000F43DF /* Model */ = {
@@ -354,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */,
+				EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */,
 				EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */,
 				EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */,
 				BF34EE1B1C5C8B6200EBB126 /* AppDelegate.swift in Sources */,

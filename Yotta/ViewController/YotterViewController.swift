@@ -10,6 +10,8 @@ import UIKit
 
 class YotterViewController: UIViewController {
 
+    @IBOutlet var yotterView: YotterView!
+    
     struct Tag {
         enum Button:Int {
             case Yotta = 1
@@ -31,7 +33,10 @@ class YotterViewController: UIViewController {
         
         switch sender.tag {
         case Tag.Button.Yotta.rawValue:
+            
+            yotterView.animateYottaTouch()
             Yotter.sharedInstance.postYotta()
+            
         default :
             break
         }
