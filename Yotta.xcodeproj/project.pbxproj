@@ -26,6 +26,7 @@
 		EF5133311C5CB3BA003955F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133301C5CB3BA003955F5 /* Constants.swift */; };
 		EF5133351C5CE1E1003955F5 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133341C5CE1E1003955F5 /* DriveView.swift */; };
 		EF5133371C5CE87F003955F5 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133361C5CE87F003955F5 /* Driver.swift */; };
+		EF52AE081C5D4F030076581B /* DriverDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52AE071C5D4F030076581B /* DriverDetailView.swift */; };
 		EFBF396F1C5D3755005C1D68 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBF396E1C5D3755005C1D68 /* DriverDetailViewController.swift */; };
 		EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBD69A1C5C9840000F43DF /* Yotter.swift */; };
 /* End PBXBuildFile section */
@@ -76,6 +77,7 @@
 		EF5133301C5CB3BA003955F5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF5133341C5CE1E1003955F5 /* DriveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriveView.swift; path = View/DriveView.swift; sourceTree = "<group>"; };
 		EF5133361C5CE87F003955F5 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		EF52AE071C5D4F030076581B /* DriverDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverDetailView.swift; path = View/DriverDetailView.swift; sourceTree = "<group>"; };
 		EFBF396E1C5D3755005C1D68 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverDetailViewController.swift; path = ViewController/DriverDetailViewController.swift; sourceTree = "<group>"; };
 		EFDBD69A1C5C9840000F43DF /* Yotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				EF5133341C5CE1E1003955F5 /* DriveView.swift */,
+				EF52AE071C5D4F030076581B /* DriverDetailView.swift */,
 				EF51332B1C5CA5F4003955F5 /* YotterView.swift */,
 			);
 			name = View;
@@ -421,6 +424,7 @@
 				BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */,
 				EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */,
 				EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */,
+				EF52AE081C5D4F030076581B /* DriverDetailView.swift in Sources */,
 				EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */,
 				EF5133311C5CB3BA003955F5 /* Constants.swift in Sources */,
 				EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */,

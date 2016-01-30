@@ -12,12 +12,12 @@ class Constants {
     struct Time {
         struct Yotter {
             struct Reload {
-                static let Interval = 5.0
+                static let Interval = 10.0
             }
         }
         struct DriverView {
             struct Animation {
-                static let Duration = 5.0
+                static let Duration = 10.0
             }
         }
     }
@@ -26,7 +26,12 @@ class Constants {
         static let UpperBound : UIColor = UIColor(red: 0.204, green: 0.596, blue: 0.859, alpha: 1.0)
     }
     struct API {
-        
+        struct Drives {
+            static let GET = "http://52.193.68.0/drives/"
+            struct RunInformations {
+                static let Analysis = "/run_informations/analysis"
+            }
+        }
     }
     struct NotificationKey {
         struct Drive {
