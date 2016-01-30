@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF34EE1B1C5C8B6200EBB126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE1A1C5C8B6200EBB126 /* AppDelegate.swift */; };
+		BF34EE1D1C5C8B6200EBB126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE1C1C5C8B6200EBB126 /* ViewController.swift */; };
+		BF34EE201C5C8B6200EBB126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE1E1C5C8B6200EBB126 /* Main.storyboard */; };
+		BF34EE221C5C8B6200EBB126 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE211C5C8B6200EBB126 /* Assets.xcassets */; };
+		BF34EE251C5C8B6200EBB126 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE231C5C8B6200EBB126 /* LaunchScreen.storyboard */; };
+		BF34EE301C5C8B6300EBB126 /* YottaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE2F1C5C8B6300EBB126 /* YottaTests.swift */; };
+		BF34EE3B1C5C8B6300EBB126 /* YottaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE3A1C5C8B6300EBB126 /* YottaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF34EE2C1C5C8B6300EBB126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF34EE0F1C5C8B6200EBB126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF34EE161C5C8B6200EBB126;
+			remoteInfo = Yotta;
+		};
+		BF34EE371C5C8B6300EBB126 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF34EE0F1C5C8B6200EBB126 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF34EE161C5C8B6200EBB126;
+			remoteInfo = Yotta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF34EE171C5C8B6200EBB126 /* Yotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF34EE1A1C5C8B6200EBB126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF34EE1C1C5C8B6200EBB126 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF34EE1F1C5C8B6200EBB126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF34EE211C5C8B6200EBB126 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF34EE241C5C8B6200EBB126 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF34EE261C5C8B6200EBB126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF34EE2B1C5C8B6300EBB126 /* YottaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YottaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF34EE2F1C5C8B6300EBB126 /* YottaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YottaTests.swift; sourceTree = "<group>"; };
+		BF34EE311C5C8B6300EBB126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF34EE361C5C8B6300EBB126 /* YottaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YottaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF34EE3A1C5C8B6300EBB126 /* YottaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YottaUITests.swift; sourceTree = "<group>"; };
+		BF34EE3C1C5C8B6300EBB126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF34EE141C5C8B6200EBB126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF34EE281C5C8B6300EBB126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF34EE331C5C8B6300EBB126 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF34EE0E1C5C8B6200EBB126 = {
+			isa = PBXGroup;
+			children = (
+				BF34EE191C5C8B6200EBB126 /* Yotta */,
+				BF34EE2E1C5C8B6300EBB126 /* YottaTests */,
+				BF34EE391C5C8B6300EBB126 /* YottaUITests */,
+				BF34EE181C5C8B6200EBB126 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF34EE181C5C8B6200EBB126 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF34EE171C5C8B6200EBB126 /* Yotta.app */,
+				BF34EE2B1C5C8B6300EBB126 /* YottaTests.xctest */,
+				BF34EE361C5C8B6300EBB126 /* YottaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF34EE191C5C8B6200EBB126 /* Yotta */ = {
+			isa = PBXGroup;
+			children = (
+				BF34EE1A1C5C8B6200EBB126 /* AppDelegate.swift */,
+				BF34EE1C1C5C8B6200EBB126 /* ViewController.swift */,
+				BF34EE1E1C5C8B6200EBB126 /* Main.storyboard */,
+				BF34EE211C5C8B6200EBB126 /* Assets.xcassets */,
+				BF34EE231C5C8B6200EBB126 /* LaunchScreen.storyboard */,
+				BF34EE261C5C8B6200EBB126 /* Info.plist */,
+			);
+			path = Yotta;
+			sourceTree = "<group>";
+		};
+		BF34EE2E1C5C8B6300EBB126 /* YottaTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF34EE2F1C5C8B6300EBB126 /* YottaTests.swift */,
+				BF34EE311C5C8B6300EBB126 /* Info.plist */,
+			);
+			path = YottaTests;
+			sourceTree = "<group>";
+		};
+		BF34EE391C5C8B6300EBB126 /* YottaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF34EE3A1C5C8B6300EBB126 /* YottaUITests.swift */,
+				BF34EE3C1C5C8B6300EBB126 /* Info.plist */,
+			);
+			path = YottaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF34EE161C5C8B6200EBB126 /* Yotta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF34EE3F1C5C8B6300EBB126 /* Build configuration list for PBXNativeTarget "Yotta" */;
+			buildPhases = (
+				BF34EE131C5C8B6200EBB126 /* Sources */,
+				BF34EE141C5C8B6200EBB126 /* Frameworks */,
+				BF34EE151C5C8B6200EBB126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yotta;
+			productName = Yotta;
+			productReference = BF34EE171C5C8B6200EBB126 /* Yotta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF34EE2A1C5C8B6300EBB126 /* YottaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF34EE421C5C8B6300EBB126 /* Build configuration list for PBXNativeTarget "YottaTests" */;
+			buildPhases = (
+				BF34EE271C5C8B6300EBB126 /* Sources */,
+				BF34EE281C5C8B6300EBB126 /* Frameworks */,
+				BF34EE291C5C8B6300EBB126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF34EE2D1C5C8B6300EBB126 /* PBXTargetDependency */,
+			);
+			name = YottaTests;
+			productName = YottaTests;
+			productReference = BF34EE2B1C5C8B6300EBB126 /* YottaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF34EE351C5C8B6300EBB126 /* YottaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF34EE451C5C8B6300EBB126 /* Build configuration list for PBXNativeTarget "YottaUITests" */;
+			buildPhases = (
+				BF34EE321C5C8B6300EBB126 /* Sources */,
+				BF34EE331C5C8B6300EBB126 /* Frameworks */,
+				BF34EE341C5C8B6300EBB126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF34EE381C5C8B6300EBB126 /* PBXTargetDependency */,
+			);
+			name = YottaUITests;
+			productName = YottaUITests;
+			productReference = BF34EE361C5C8B6300EBB126 /* YottaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF34EE0F1C5C8B6200EBB126 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = cherrasco;
+				TargetAttributes = {
+					BF34EE161C5C8B6200EBB126 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					BF34EE2A1C5C8B6300EBB126 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BF34EE161C5C8B6200EBB126;
+					};
+					BF34EE351C5C8B6300EBB126 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BF34EE161C5C8B6200EBB126;
+					};
+				};
+			};
+			buildConfigurationList = BF34EE121C5C8B6200EBB126 /* Build configuration list for PBXProject "Yotta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF34EE0E1C5C8B6200EBB126;
+			productRefGroup = BF34EE181C5C8B6200EBB126 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF34EE161C5C8B6200EBB126 /* Yotta */,
+				BF34EE2A1C5C8B6300EBB126 /* YottaTests */,
+				BF34EE351C5C8B6300EBB126 /* YottaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF34EE151C5C8B6200EBB126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF34EE251C5C8B6200EBB126 /* LaunchScreen.storyboard in Resources */,
+				BF34EE221C5C8B6200EBB126 /* Assets.xcassets in Resources */,
+				BF34EE201C5C8B6200EBB126 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF34EE291C5C8B6300EBB126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF34EE341C5C8B6300EBB126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF34EE131C5C8B6200EBB126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF34EE1D1C5C8B6200EBB126 /* ViewController.swift in Sources */,
+				BF34EE1B1C5C8B6200EBB126 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF34EE271C5C8B6300EBB126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF34EE301C5C8B6300EBB126 /* YottaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF34EE321C5C8B6300EBB126 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF34EE3B1C5C8B6300EBB126 /* YottaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF34EE2D1C5C8B6300EBB126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF34EE161C5C8B6200EBB126 /* Yotta */;
+			targetProxy = BF34EE2C1C5C8B6300EBB126 /* PBXContainerItemProxy */;
+		};
+		BF34EE381C5C8B6300EBB126 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF34EE161C5C8B6200EBB126 /* Yotta */;
+			targetProxy = BF34EE371C5C8B6300EBB126 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF34EE1E1C5C8B6200EBB126 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF34EE1F1C5C8B6200EBB126 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF34EE231C5C8B6200EBB126 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF34EE241C5C8B6200EBB126 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF34EE3D1C5C8B6300EBB126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF34EE3E1C5C8B6300EBB126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF34EE401C5C8B6300EBB126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Yotta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.Yotta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF34EE411C5C8B6300EBB126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Yotta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.Yotta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF34EE431C5C8B6300EBB126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YottaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.YottaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yotta.app/Yotta";
+			};
+			name = Debug;
+		};
+		BF34EE441C5C8B6300EBB126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YottaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.YottaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yotta.app/Yotta";
+			};
+			name = Release;
+		};
+		BF34EE461C5C8B6300EBB126 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YottaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.YottaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Yotta;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BF34EE471C5C8B6300EBB126 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YottaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cherrasco.YottaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Yotta;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF34EE121C5C8B6200EBB126 /* Build configuration list for PBXProject "Yotta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF34EE3D1C5C8B6300EBB126 /* Debug */,
+				BF34EE3E1C5C8B6300EBB126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF34EE3F1C5C8B6300EBB126 /* Build configuration list for PBXNativeTarget "Yotta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF34EE401C5C8B6300EBB126 /* Debug */,
+				BF34EE411C5C8B6300EBB126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF34EE421C5C8B6300EBB126 /* Build configuration list for PBXNativeTarget "YottaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF34EE431C5C8B6300EBB126 /* Debug */,
+				BF34EE441C5C8B6300EBB126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF34EE451C5C8B6300EBB126 /* Build configuration list for PBXNativeTarget "YottaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF34EE461C5C8B6300EBB126 /* Debug */,
+				BF34EE471C5C8B6300EBB126 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF34EE0F1C5C8B6200EBB126 /* Project object */;
+}
