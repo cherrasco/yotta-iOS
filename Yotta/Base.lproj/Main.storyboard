@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rk-Cy-kmt">
-                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <rect key="frame" x="230" y="230" width="140" height="140"/>
                                 <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="8XH-9U-gg7"/>
-                                    <constraint firstAttribute="width" constant="100" id="pbX-kK-PJB"/>
+                                    <constraint firstAttribute="height" constant="140" id="8XH-9U-gg7"/>
+                                    <constraint firstAttribute="width" constant="140" id="pbX-kK-PJB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <state key="normal" title="Yotta"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="50"/>
+                                        <integer key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -36,12 +36,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yotta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-Ne-rgx">
-                                <rect key="frame" x="200" y="145" width="200" height="100"/>
+                                <rect key="frame" x="175" y="125" width="250" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="5Sh-pL-PmT"/>
-                                    <constraint firstAttribute="width" constant="200" id="KeC-W9-a62"/>
+                                    <constraint firstAttribute="width" constant="250" id="KeC-W9-a62"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                 <color key="textColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -76,12 +76,44 @@
                         <viewControllerLayoutGuide type="top" id="HLg-ZZ-W79"/>
                         <viewControllerLayoutGuide type="bottom" id="eh5-JH-39g"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Uhm-tu-Nww">
+                    <view key="view" contentMode="scaleToFill" id="Uhm-tu-Nww" customClass="DriveView" customModule="Yotta" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmu-Yx-DNQ">
+                                <rect key="frame" x="0.0" y="551" width="600" height="0.0"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" id="qQA-HC-p2v"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-Ao-7cg">
+                                <rect key="frame" x="0.0" y="521" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X75-4m-Vnx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zwf-Ao-7cg" secondAttribute="trailing" id="1KL-mJ-W0c"/>
+                            <constraint firstItem="vmu-Yx-DNQ" firstAttribute="leading" secondItem="Uhm-tu-Nww" secondAttribute="leading" id="RZk-fE-by1"/>
+                            <constraint firstItem="zwf-Ao-7cg" firstAttribute="leading" secondItem="Uhm-tu-Nww" secondAttribute="leading" id="pwc-s1-wDi"/>
+                            <constraint firstItem="eh5-JH-39g" firstAttribute="top" secondItem="vmu-Yx-DNQ" secondAttribute="bottom" id="rxr-lm-n4r"/>
+                            <constraint firstItem="vmu-Yx-DNQ" firstAttribute="top" secondItem="zwf-Ao-7cg" secondAttribute="bottom" id="wHK-rV-iwp"/>
+                            <constraint firstAttribute="trailing" secondItem="vmu-Yx-DNQ" secondAttribute="trailing" id="zCh-5W-vej"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="filledView" destination="vmu-Yx-DNQ" id="7xN-7S-yDJ"/>
+                            <outlet property="filledViewHeight" destination="qQA-HC-p2v" id="r71-tc-F0u"/>
+                            <outlet property="waveView" destination="zwf-Ao-7cg" id="JwZ-VR-aw9"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Driver" id="znf-ZL-LeD" userLabel="Driver"/>
+                    <connections>
+                        <outlet property="driveView" destination="Uhm-tu-Nww" id="e0O-Tc-nGI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neI-jk-UfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
