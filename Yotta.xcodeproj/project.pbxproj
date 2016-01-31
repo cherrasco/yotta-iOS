@@ -17,6 +17,7 @@
 		BF34EE4C1C5D30E600EBB126 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF34EE4B1C5D30E600EBB126 /* AudioToolbox.framework */; };
 		BF34EE4F1C5D43FB00EBB126 /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */; };
 		BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */; };
+		BF34EE551C5DA9D100EBB126 /* kadowaki_yotta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */; };
 		C52417545C3FD88CC084F291 /* Pods_Yotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */; };
 		EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133261C5CA192003955F5 /* DriverViewController.swift */; };
 		EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133281C5CA1AA003955F5 /* YotterViewController.swift */; };
@@ -65,6 +66,7 @@
 		BF34EE4B1C5D30E600EBB126 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
 		BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YottaSoundPlayer.swift; sourceTree = "<group>"; };
+		BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kadowaki_yotta.mp3; sourceTree = "<group>"; };
 		E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5133261C5CA192003955F5 /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverViewController.swift; path = ViewController/DriverViewController.swift; sourceTree = "<group>"; };
 		EF5133281C5CA1AA003955F5 /* YotterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterViewController.swift; path = ViewController/YotterViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 		BF34EE4D1C5D43DE00EBB126 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
+				BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */,
 				BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */,
 			);
 			name = sounds;
@@ -334,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF34EE551C5DA9D100EBB126 /* kadowaki_yotta.mp3 in Resources */,
 				BF34EE251C5C8B6200EBB126 /* LaunchScreen.storyboard in Resources */,
 				BF34EE4F1C5D43FB00EBB126 /* punch.mp3 in Resources */,
 				BF34EE221C5C8B6200EBB126 /* Assets.xcassets in Resources */,

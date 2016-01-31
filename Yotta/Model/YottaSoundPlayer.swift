@@ -7,23 +7,40 @@
 //
 
 import AVFoundation
+import Alamofire
 
 class YottaSoundPlayer {
     
     private var player = AVAudioPlayer()
+    private var session = AVAudioSession()
+    private var connection = TCConnection()
+    private var soundUrlArray = Array<NSURL>()
         
     init() {
-        let soundPath = NSBundle.mainBundle().pathForResource("punch", ofType: "mp3")
-        let soundUrl = NSURL(fileURLWithPath: soundPath!)
+        let soundPath1 = NSBundle.mainBundle().pathForResource("punch", ofType: "mp3")
+        soundUrlArray.append(NSURL(fileURLWithPath: soundPath1!))
+        let soundPath2 = NSBundle.mainBundle().pathForResource("kadowaki_yotta", ofType: "mp3")
+        soundUrlArray.append(NSURL(fileURLWithPath: soundPath2!))
 
         do {
-            player = try AVAudioPlayer(contentsOfURL: soundUrl)
+            // NOTE: とりあえず初期化
+            player = try AVAudioPlayer(contentsOfURL: soundUrlArray.first!)
         } catch {
             print("sound error = \(error)")
         }
     }
     
+    // NOTE: ランダムで音楽を流してるけどパフォーマンスに影響出たらやめます笑
     internal func playYottaSound() {
+        let randomNumber = arc4random_uniform(UInt32(soundUrlArray.count))
+        let randomSoundUrl = soundUrlArray[Int(randomNumber)]
+
+        do {
+            player = try AVAudioPlayer(contentsOfURL: randomSoundUrl)
+        } catch {
+            print("sound error = \(error)")
+        }
+
         player.play()
     }
 }
