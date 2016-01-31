@@ -46,7 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
-        if let state : Int = userInfo["state"] {
+        if let state : Int = userInfo["state"] as? Int {
             switch state {
             case 0:
                 // start 
@@ -65,6 +65,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 
                 NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Yotted, object: nil)
+            default:
+                break
             }
         }
         

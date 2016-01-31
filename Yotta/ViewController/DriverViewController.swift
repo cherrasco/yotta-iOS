@@ -26,10 +26,10 @@ class DriverViewController: UIViewController {
         super.viewDidAppear(animated)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "yottaUpdated:", name: Constants.NotificationKey.Drive.Yotta.Updated, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "yottaYotted:", name: Constants.NotificationKey.Drive.Yotta.Yotted, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureStarted:", name: Constants.NotificationKey.Drive.Yotta.WillStart, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureEnd:", name: Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "measureReset:", name: Constants.NotificationKey.Drive.Yotta.Reset, object: nil)
-        Driver.sharedInstance.startReloadingYotta()
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -49,6 +49,9 @@ class DriverViewController: UIViewController {
             driveView.setColorScale(yotta.recent)
             driveView.animateWaveLayer()
         }
+    }
+    func yottaYotted(sender: NSNotification) {
+        driveView.animateDropText()
     }
     func measureStarted(sender: NSNotification) {
         Driver.sharedInstance.startReloadingYotta()
