@@ -25,7 +25,13 @@ class Driver: NSObject {
     var yotta = Yotta() {
         didSet {
             yottaRecords.append(yotta)
-            NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Updated, object: nil,userInfo: ["yotta":yotta])
+            
+            if yottaRecords.count > 10 {
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil,userInfo: ["yotta":yotta])
+            }
+            else {
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Updated, object: nil,userInfo: ["yotta":yotta])
+            }
         }
     }
     var yottaRecords : [Yotta] = []
