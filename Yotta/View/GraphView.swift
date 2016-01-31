@@ -16,6 +16,7 @@ class GraphView: UIView {
         for layer in graphRects {
             layer.removeFromSuperlayer()
         }
+        graphRects = []
         
         for i in 0...number-1 {
             let newLayer = CALayer()
@@ -32,8 +33,8 @@ class GraphView: UIView {
             let lineShape = CAShapeLayer()
             let linePath = UIBezierPath()
             
-            let strokeXStart : CGFloat = self.bounds.width*CGFloat(index/graphRects.count)
-            let strokeXEnd : CGFloat = self.bounds.width*CGFloat(index+1/graphRects.count)
+            let strokeXStart : CGFloat = self.bounds.width*CGFloat(index)/CGFloat(graphRects.count)
+            let strokeXEnd : CGFloat = self.bounds.width*CGFloat((index+1))/CGFloat(graphRects.count)
             
             var strokeYStart : CGFloat = self.bounds.height
             let strokeYEnd : CGFloat = self.bounds.height*CGFloat(Driver.sharedInstance.yottaRecords[index].recent)

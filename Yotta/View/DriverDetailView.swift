@@ -10,6 +10,7 @@ import UIKit
 
 class DriverDetailView: UIView {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var centerContainerView: UIView!
     @IBOutlet weak var yottaCountLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
@@ -18,7 +19,7 @@ class DriverDetailView: UIView {
     func setThemaColor(color: UIColor) {
         self.backgroundColor = color
         self.closeButton.setTitleColor(color, forState: .Normal)
-        
+        segmentedControl.backgroundColor = color
     }
     /*
     // Only override drawRect: if you perform custom drawing.
