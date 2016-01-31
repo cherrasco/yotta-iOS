@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        settingRemoteNotification()
         return true
     }
 
@@ -42,5 +44,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        if let tabBarController = window?.rootViewController as? UITabBarController {
+            for viewController in tabBarController.viewControllers! {
+                if let driveViewController = viewController as? DriverViewController {
+                    driveViewController.playYottaSound()
+                }
+            }
+        }
+        
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0
 
+        completionHandler(UIBackgroundFetchResult.NewData)
+    }
+
+    func settingRemoteNotification() {
+        let osVersion = UIDevice.currentDevice().systemVersion
+
+        if(NSString(string: osVersion).floatValue >= 8.0) {
+            let notificationSettings = UIUserNotificationSettings(forTypes: [.Badge, .Alert, .Sound], categories: nil)
+            UIApplication.sharedApplication().registerForRemoteNotifications()
+            UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        }
+        else {
+            UIApplication.sharedApplication().registerForRemoteNotificationTypes([.Badge, .Alert, .Sound])
+        }
+    }
+
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        print("device token = \(deviceToken)")
+
+        let deviceTokenString = deviceToken.description.stringByReplacingOccurrencesOfString(" ", withString: "_")
+
+        self.setAndSendDeviceToken(deviceTokenString)
+    }
+
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("Fail to regist device token. error: \(error)")
+    }
+
+    func setAndSendDeviceToken(tempDeviceToken: String) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let deviceToken = userDefaults.stringForKey("deviceToken")
+        if deviceToken != tempDeviceToken {
+            // TODO: 要リクエスト先変更
+            Alamofire.request(.POST, "http://52.68.60.142/yotta-server/ios_push_notification_sample.php", parameters: [ "device_token" : tempDeviceToken ]).responseJSON(completionHandler: { response in
+                if let result = response.result.value as? NSDictionary, status = result["status"] as? String {
+                    print(status)
+                    userDefaults.setObject(tempDeviceToken, forKey: "deviceToken")
+                } else {
+                    print("Failed register device token.")
+                }
+            })
+        }
+        else {
+            print("device token is already up-to-date")
+        }
+    }
+}

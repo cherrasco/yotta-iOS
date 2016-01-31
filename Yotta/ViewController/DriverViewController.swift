@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Alamofire
+import AVFoundation
+import AudioToolbox
 
 class DriverViewController: UIViewController {
 
     @IBOutlet var driveView: DriveView!
     
+    private var audioPlayer = YottaSoundPlayer()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         driveView.setMaskLayer()
@@ -47,4 +52,7 @@ class DriverViewController: UIViewController {
         driveView.animateDropText()
     }
 
+    internal func playYottaSound() {
+        audioPlayer.playYottaSound()
+    }
 }
