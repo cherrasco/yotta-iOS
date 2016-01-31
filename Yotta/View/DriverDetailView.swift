@@ -10,6 +10,7 @@ import UIKit
 
 class DriverDetailView: UIView {
 
+    @IBOutlet weak var centerContainerView: UIView!
     @IBOutlet weak var yottaCountLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     

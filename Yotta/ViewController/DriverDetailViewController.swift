@@ -18,6 +18,9 @@ class DriverDetailViewController: UIViewController {
     
     @IBOutlet var driverDetailView: DriverDetailView!
     
+    var mapViewController : MapViewController?
+    var graphViewController : GraphViewController?
+    
     var themaColor : UIColor? = nil
     
     override func viewDidLoad() {
@@ -29,8 +32,25 @@ class DriverDetailViewController: UIViewController {
             driverDetailView.setThemaColor(themaColor)
         }
         
+        mapViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MapViewController") as? MapViewController
+        graphViewController = self.storyboard!.instantiateViewControllerWithIdentifier("GraphViewController") as? GraphViewController
+        
+        mapViewController!.view.frame = self.driverDetailView.centerContainerView.bounds
+        graphViewController!.view.frame = self.driverDetailView.centerContainerView.bounds
+        
+        // set default map
+        self.addChildViewController(mapViewController!)
+        self.driverDetailView.centerContainerView.addSubview(mapViewController!.view)
+        
+        
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mapViewController!.view.frame = self.driverDetailView.centerContainerView.bounds
+        graphViewController!.view.frame = self.driverDetailView.centerContainerView.bounds
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,4 +67,21 @@ class DriverDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func segmentedControlValueChanged(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            graphViewController?.view.removeFromSuperview()
+            graphViewController?.removeFromParentViewController()
+            self.addChildViewController(mapViewController!)
+            self.driverDetailView.centerContainerView.addSubview(mapViewController!.view)
+        case 1:
+            mapViewController?.view.removeFromSuperview()
+            mapViewController?.removeFromParentViewController()
+            self.addChildViewController(graphViewController!)
+            self.driverDetailView.centerContainerView.addSubview(graphViewController!.view)
+        default:
+            break
+        
+        }
+    }
 }
