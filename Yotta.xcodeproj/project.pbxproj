@@ -18,6 +18,8 @@
 		BF34EE4F1C5D43FB00EBB126 /* punch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */; };
 		BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */; };
 		BF34EE551C5DA9D100EBB126 /* kadowaki_yotta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */; };
+		BF7A3F8B1C5DC396000E1E26 /* YottaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7A3F8A1C5DC396000E1E26 /* YottaResult.swift */; };
+		BF7A3F8D1C5DC440000E1E26 /* RunInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7A3F8C1C5DC440000E1E26 /* RunInformation.swift */; };
 		C52417545C3FD88CC084F291 /* Pods_Yotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */; };
 		EF1AD9571C5DA4CB00F8E735 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AD9561C5DA4CB00F8E735 /* GraphViewController.swift */; };
 		EF1AD9591C5DA4EC00F8E735 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AD9581C5DA4EC00F8E735 /* MapViewController.swift */; };
@@ -72,6 +74,8 @@
 		BF34EE4E1C5D43FB00EBB126 /* punch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = punch.mp3; sourceTree = "<group>"; };
 		BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YottaSoundPlayer.swift; sourceTree = "<group>"; };
 		BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kadowaki_yotta.mp3; sourceTree = "<group>"; };
+		BF7A3F8A1C5DC396000E1E26 /* YottaResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YottaResult.swift; sourceTree = "<group>"; };
+		BF7A3F8C1C5DC440000E1E26 /* RunInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunInformation.swift; sourceTree = "<group>"; };
 		E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1AD9561C5DA4CB00F8E735 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewController.swift; path = ViewController/GraphViewController.swift; sourceTree = "<group>"; };
 		EF1AD9581C5DA4EC00F8E735 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewController/MapViewController.swift; sourceTree = "<group>"; };
@@ -231,7 +235,9 @@
 				EF5133361C5CE87F003955F5 /* Driver.swift */,
 				EFDBD69A1C5C9840000F43DF /* Yotter.swift */,
 				EF51332E1C5CB26D003955F5 /* Translate.swift */,
+				BF7A3F8A1C5DC396000E1E26 /* YottaResult.swift */,
 				BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */,
+				BF7A3F8C1C5DC440000E1E26 /* RunInformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				EF51332F1C5CB26D003955F5 /* Translate.swift in Sources */,
 				BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */,
 				EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */,
+				BF7A3F8D1C5DC440000E1E26 /* RunInformation.swift in Sources */,
 				EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */,
 				EF52AE081C5D4F030076581B /* DriverDetailView.swift in Sources */,
 				EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */,
@@ -441,6 +448,7 @@
 				EF5133371C5CE87F003955F5 /* Driver.swift in Sources */,
 				EF1AD95B1C5DAB7E00F8E735 /* GraphView.swift in Sources */,
 				BF34EE1B1C5C8B6200EBB126 /* AppDelegate.swift in Sources */,
+				BF7A3F8B1C5DC396000E1E26 /* YottaResult.swift in Sources */,
 				EF1AD9571C5DA4CB00F8E735 /* GraphViewController.swift in Sources */,
 				EFBF396F1C5D3755005C1D68 /* DriverDetailViewController.swift in Sources */,
 				EF5133351C5CE1E1003955F5 /* DriveView.swift in Sources */,
