@@ -95,20 +95,12 @@
                                     <constraint firstAttribute="height" constant="30" id="X75-4m-Vnx"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0el-s4-Xzz">
-                                <rect key="frame" x="238.5" y="270" width="124.5" height="60"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="zwf-Ao-7cg" secondAttribute="trailing" id="1KL-mJ-W0c"/>
-                            <constraint firstItem="0el-s4-Xzz" firstAttribute="centerY" secondItem="Uhm-tu-Nww" secondAttribute="centerY" id="G7h-sV-vN5"/>
                             <constraint firstItem="vmu-Yx-DNQ" firstAttribute="leading" secondItem="Uhm-tu-Nww" secondAttribute="leading" id="RZk-fE-by1"/>
-                            <constraint firstItem="0el-s4-Xzz" firstAttribute="centerX" secondItem="Uhm-tu-Nww" secondAttribute="centerX" id="Us7-Wl-q2F"/>
                             <constraint firstItem="zwf-Ao-7cg" firstAttribute="leading" secondItem="Uhm-tu-Nww" secondAttribute="leading" id="pwc-s1-wDi"/>
                             <constraint firstItem="eh5-JH-39g" firstAttribute="top" secondItem="vmu-Yx-DNQ" secondAttribute="bottom" id="rxr-lm-n4r"/>
                             <constraint firstItem="vmu-Yx-DNQ" firstAttribute="top" secondItem="zwf-Ao-7cg" secondAttribute="bottom" id="wHK-rV-iwp"/>
@@ -117,7 +109,6 @@
                         <connections>
                             <outlet property="filledView" destination="vmu-Yx-DNQ" id="7xN-7S-yDJ"/>
                             <outlet property="filledViewHeight" destination="qQA-HC-p2v" id="r71-tc-F0u"/>
-                            <outlet property="haitaLabel" destination="0el-s4-Xzz" id="eP4-df-bCS"/>
                             <outlet property="waveView" destination="zwf-Ao-7cg" id="JwZ-VR-aw9"/>
                         </connections>
                     </view>
