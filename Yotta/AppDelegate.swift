@@ -46,16 +46,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
-        if let tabBarController = window?.rootViewController as? UITabBarController {
-            for viewController in tabBarController.viewControllers! {
-                if let driveViewController = viewController as? DriverViewController {
-                    driveViewController.playYottaSound()
+        if let state : Int = userInfo["state"] {
+            switch state {
+            case 0:
+                // start 
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.WillStart, object: nil)
+            case 1:
+                // end
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil)
+            case 2:
+                // yotta
+                if let tabBarController = window?.rootViewController as? UITabBarController {
+                    for viewController in tabBarController.viewControllers! {
+                        if let driveViewController = viewController as? DriverViewController {
+                            driveViewController.playYottaSound()
+                        }
+                    }
                 }
+                
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Yotted, object: nil)
             }
         }
         
+        
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-
+        
         completionHandler(UIBackgroundFetchResult.NewData)
     }
 

@@ -43,6 +43,7 @@ class Constants {
                 static let WillStart = "kNotificationKeyDriveYottaWillStart"
                 static let WillEnd = "kNotificationKeyDriveYottaWillEnd"
                 static let Updated = "kNotificationKeyDriveYottaUpdated"
+                static let Yotted = "kNotificationKeyDriveYottaYotted"
                 static let Reset = "kNotificationKeyDriveYottaReset"
             }
         }
