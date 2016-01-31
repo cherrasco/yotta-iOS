@@ -14,6 +14,7 @@ class DriveView: UIView {
     var maskLayer : CALayer? = nil
     
     // MARK:- Property IBOutlet
+    @IBOutlet var haitaLabel: UILabel!
     @IBOutlet weak var filledView: UIView!
     @IBOutlet weak var waveView: UIView!
     @IBOutlet weak var filledViewHeight: NSLayoutConstraint!
@@ -21,9 +22,16 @@ class DriveView: UIView {
     // MARK:- Methods Setter Layout
     func setFilledScale(scale: Double) {
         filledViewHeight.constant = self.bounds.height*CGFloat(scale)
-        UIView.animateWithDuration(Constants.Time.DriverView.Animation.Duration) {
+        UIView.animateWithDuration(Constants.Time.DriverView.Animation.Duration, animations: {
             self.layoutIfNeeded()
-            
+            }) { result -> Void in
+                if scale == 1.0 {
+                    self.haitaLabel.hidden = false
+                    self.animateVibrateLabel()
+                }
+                else {
+                    self.haitaLabel.hidden = true
+                }
         }
     }
     func setColorScale(scale: Double) {
@@ -46,6 +54,41 @@ class DriveView: UIView {
             maskLayer = newMaskLayer
             waveView.layer.mask = maskLayer
         }
+    }
+    func completionLayout(completionHandler: (()->Void)? = nil) {
+        
+        // animate wave
+        let animation = CABasicAnimation(keyPath: "position.x")
+        animation.fromValue = maskLayer!.position.x
+        animation.toValue = maskLayer!.position.x-190.0
+        animation.duration = 0.5
+        maskLayer?.addAnimation(animation, forKey: "position.x")
+        
+        // filled scale
+        filledViewHeight.constant = self.bounds.height*1.0
+        UIView.animateWithDuration(0.5) {
+            self.layoutIfNeeded()
+            
+            if let completionHandler = completionHandler {
+                completionHandler()
+            }
+        }
+    }
+    func resetLayout() {
+        
+        // animate wave
+        let animation = CABasicAnimation(keyPath: "position.x")
+        animation.fromValue = maskLayer!.position.x
+        animation.toValue = maskLayer!.position.x-190.0
+        animation.duration = 0.5
+        maskLayer?.addAnimation(animation, forKey: "position.x")
+        
+        // filled scale
+        filledViewHeight.constant = self.bounds.height*0.0
+        UIView.animateWithDuration(0.5) {
+            self.layoutIfNeeded()
+        }
+
     }
     
     // MARK:- Methods Animate Layer
@@ -74,6 +117,15 @@ class DriveView: UIView {
         dropAnimation.fillMode = kCAFillModeForwards
         textLayer.addAnimation(dropAnimation, forKey: "position.y")
         
+    }
+    func animateVibrateLabel() {
+        let vibrateAnimation = CABasicAnimation(keyPath: "position.x")
+        vibrateAnimation.duration = 0.1
+        vibrateAnimation.repeatCount = 20
+        vibrateAnimation.autoreverses = true
+        vibrateAnimation.fromValue = haitaLabel.center.x-5
+        vibrateAnimation.toValue = haitaLabel.center.x+5
+        haitaLabel.layer.addAnimation(vibrateAnimation, forKey: "position.x")
     }
     
 }

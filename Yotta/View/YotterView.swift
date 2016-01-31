@@ -13,6 +13,7 @@ class YotterView: UIView {
     @IBOutlet weak var yottaLabel: UILabel!
     @IBOutlet weak var yottaButton: UIButton!
     
+    @IBOutlet weak var yottaCenterX: NSLayoutConstraint!
     @IBOutlet weak var yottaMargin: NSLayoutConstraint!
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -24,6 +25,7 @@ class YotterView: UIView {
 
     func animateYottaTouch() {
         
+        // pop label animation
         self.yottaMargin.constant = 20
         UIView.animateWithDuration(0.1, animations: { () -> Void in
             self.yottaLabel.alpha = 1.0
@@ -35,5 +37,15 @@ class YotterView: UIView {
                         self.yottaMargin.constant = 5
                 }
         }
+        
+        // 
+        let vibrateAnimation = CABasicAnimation(keyPath: "position.x")
+        vibrateAnimation.duration = 0.05
+        vibrateAnimation.repeatCount = 4
+        vibrateAnimation.autoreverses = true
+        vibrateAnimation.fromValue = yottaButton.center.x-3
+        vibrateAnimation.toValue = yottaButton.center.x+3
+        yottaButton.layer.addAnimation(vibrateAnimation, forKey: "position.x")
+        
     }
 }

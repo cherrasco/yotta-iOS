@@ -19,6 +19,9 @@
 		BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */; };
 		BF34EE551C5DA9D100EBB126 /* kadowaki_yotta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */; };
 		C52417545C3FD88CC084F291 /* Pods_Yotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */; };
+		EF1AD9571C5DA4CB00F8E735 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AD9561C5DA4CB00F8E735 /* GraphViewController.swift */; };
+		EF1AD9591C5DA4EC00F8E735 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AD9581C5DA4EC00F8E735 /* MapViewController.swift */; };
+		EF1AD95B1C5DAB7E00F8E735 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AD95A1C5DAB7E00F8E735 /* GraphView.swift */; };
 		EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133261C5CA192003955F5 /* DriverViewController.swift */; };
 		EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133281C5CA1AA003955F5 /* YotterViewController.swift */; };
 		EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51332B1C5CA5F4003955F5 /* YotterView.swift */; };
@@ -26,6 +29,8 @@
 		EF5133311C5CB3BA003955F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133301C5CB3BA003955F5 /* Constants.swift */; };
 		EF5133351C5CE1E1003955F5 /* DriveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133341C5CE1E1003955F5 /* DriveView.swift */; };
 		EF5133371C5CE87F003955F5 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5133361C5CE87F003955F5 /* Driver.swift */; };
+		EF52AE081C5D4F030076581B /* DriverDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF52AE071C5D4F030076581B /* DriverDetailView.swift */; };
+		EFBF396F1C5D3755005C1D68 /* DriverDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBF396E1C5D3755005C1D68 /* DriverDetailViewController.swift */; };
 		EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDBD69A1C5C9840000F43DF /* Yotter.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,9 @@
 		BF34EE521C5D4A1B00EBB126 /* YottaSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YottaSoundPlayer.swift; sourceTree = "<group>"; };
 		BF34EE541C5DA9D100EBB126 /* kadowaki_yotta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kadowaki_yotta.mp3; sourceTree = "<group>"; };
 		E679AA34AF91D69E027DE845 /* Pods_Yotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1AD9561C5DA4CB00F8E735 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphViewController.swift; path = ViewController/GraphViewController.swift; sourceTree = "<group>"; };
+		EF1AD9581C5DA4EC00F8E735 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewController/MapViewController.swift; sourceTree = "<group>"; };
+		EF1AD95A1C5DAB7E00F8E735 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = View/GraphView.swift; sourceTree = "<group>"; };
 		EF5133261C5CA192003955F5 /* DriverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverViewController.swift; path = ViewController/DriverViewController.swift; sourceTree = "<group>"; };
 		EF5133281C5CA1AA003955F5 /* YotterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterViewController.swift; path = ViewController/YotterViewController.swift; sourceTree = "<group>"; };
 		EF51332B1C5CA5F4003955F5 /* YotterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YotterView.swift; path = View/YotterView.swift; sourceTree = "<group>"; };
@@ -75,6 +83,8 @@
 		EF5133301C5CB3BA003955F5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EF5133341C5CE1E1003955F5 /* DriveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriveView.swift; path = View/DriveView.swift; sourceTree = "<group>"; };
 		EF5133361C5CE87F003955F5 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		EF52AE071C5D4F030076581B /* DriverDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverDetailView.swift; path = View/DriverDetailView.swift; sourceTree = "<group>"; };
+		EFBF396E1C5D3755005C1D68 /* DriverDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverDetailViewController.swift; path = ViewController/DriverDetailViewController.swift; sourceTree = "<group>"; };
 		EFDBD69A1C5C9840000F43DF /* Yotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yotter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,7 +206,10 @@
 			isa = PBXGroup;
 			children = (
 				EF5133261C5CA192003955F5 /* DriverViewController.swift */,
+				EFBF396E1C5D3755005C1D68 /* DriverDetailViewController.swift */,
 				EF5133281C5CA1AA003955F5 /* YotterViewController.swift */,
+				EF1AD9561C5DA4CB00F8E735 /* GraphViewController.swift */,
+				EF1AD9581C5DA4EC00F8E735 /* MapViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -204,8 +217,10 @@
 		EF51332A1C5CA5D9003955F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EF51332B1C5CA5F4003955F5 /* YotterView.swift */,
 				EF5133341C5CE1E1003955F5 /* DriveView.swift */,
+				EF52AE071C5D4F030076581B /* DriverDetailView.swift */,
+				EF51332B1C5CA5F4003955F5 /* YotterView.swift */,
+				EF1AD95A1C5DAB7E00F8E735 /* GraphView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -418,11 +433,16 @@
 				BF34EE531C5D4A1B00EBB126 /* YottaSoundPlayer.swift in Sources */,
 				EF5133291C5CA1AA003955F5 /* YotterViewController.swift in Sources */,
 				EF51332C1C5CA5F4003955F5 /* YotterView.swift in Sources */,
+				EF52AE081C5D4F030076581B /* DriverDetailView.swift in Sources */,
 				EF5133271C5CA192003955F5 /* DriverViewController.swift in Sources */,
 				EF5133311C5CB3BA003955F5 /* Constants.swift in Sources */,
+				EF1AD9591C5DA4EC00F8E735 /* MapViewController.swift in Sources */,
 				EFDBD69B1C5C9840000F43DF /* Yotter.swift in Sources */,
 				EF5133371C5CE87F003955F5 /* Driver.swift in Sources */,
+				EF1AD95B1C5DAB7E00F8E735 /* GraphView.swift in Sources */,
 				BF34EE1B1C5C8B6200EBB126 /* AppDelegate.swift in Sources */,
+				EF1AD9571C5DA4CB00F8E735 /* GraphViewController.swift in Sources */,
+				EFBF396F1C5D3755005C1D68 /* DriverDetailViewController.swift in Sources */,
 				EF5133351C5CE1E1003955F5 /* DriveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

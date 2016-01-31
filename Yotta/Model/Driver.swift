@@ -14,6 +14,7 @@ class Driver: NSObject {
     class Yotta {
         var recent : Double = 0.0
         var whole : Double = 0.0
+        var createdDate : NSDate = NSDate()
     }
     
     // MARK:- Properties
@@ -23,19 +24,28 @@ class Driver: NSObject {
     
     var yotta = Yotta() {
         didSet {
+            yottaRecords.append(yotta)
             NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Updated, object: nil,userInfo: ["yotta":yotta])
         }
     }
+    var yottaRecords : [Yotta] = []
     
     // MARK:- Methods : load remote data
     func loadYotta() {
-        let newValue = Yotta()
-        newValue.recent = Double(arc4random()) / Double(UINT32_MAX)
-        newValue.whole = Double(arc4random()) / Double(UINT32_MAX)
-        
-        self.yotta = newValue
+        Alamofire.request(.GET, Constants.API.Drives.GET+String(1)+Constants.API.Drives.RunInformations.Analysis).responseJSON { response -> Void in
+            if let json = response.result.value as? [String:AnyObject] {
+                let newValue = Yotta()
+                newValue.recent = json["recent_yotta"] as! Double
+                newValue.whole = json["whole_yotta"] as! Double
+                
+                self.yotta = newValue
+            }
+        }
     }
     func startReloadingYotta() {
+        
+        yottaRecords = []
+        
         if let reloadTimer = reloadTimer {
             reloadTimer.fire()
         }

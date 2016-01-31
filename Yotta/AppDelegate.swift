@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         settingRemoteNotification()
+        window?.backgroundColor = UIColor.whiteColor()
         return true
     }
 
@@ -46,16 +47,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
-        if let tabBarController = window?.rootViewController as? UITabBarController {
-            for viewController in tabBarController.viewControllers! {
-                if let driveViewController = viewController as? DriverViewController {
-                    driveViewController.playYottaSound()
+        if let state : Int = userInfo["state"] as? Int {
+            switch state {
+            case 0:
+                // start 
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.WillStart, object: nil)
+            case 1:
+                // end
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.WillEnd, object: nil)
+            case 2:
+                // yotta
+                if let tabBarController = window?.rootViewController as? UITabBarController {
+                    for viewController in tabBarController.viewControllers! {
+                        if let driveViewController = viewController as? DriverViewController {
+                            driveViewController.playYottaSound()
+                        }
+                    }
                 }
+                
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Yotted, object: nil)
+            default:
+                break
             }
         }
         
+        
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
-
+        
         completionHandler(UIBackgroundFetchResult.NewData)
     }
 
