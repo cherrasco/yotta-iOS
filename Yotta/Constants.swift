@@ -32,6 +32,10 @@ class Constants {
                 static let Analysis = "/run_informations/analysis"
             }
         }
+        struct Yotter {
+            static let POST = "http://52.193.68.0/yotta"
+            static let GET = "http://52.193.68.0/users/1/latest_drive_id.json"
+        }
     }
     struct NotificationKey {
         struct Drive {

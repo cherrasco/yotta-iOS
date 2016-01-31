@@ -14,6 +14,7 @@ class Driver: NSObject {
     class Yotta {
         var recent : Double = 0.0
         var whole : Double = 0.0
+        var createdDate : NSDate = NSDate()
     }
     
     // MARK:- Properties
@@ -23,9 +24,11 @@ class Driver: NSObject {
     
     var yotta = Yotta() {
         didSet {
+            yottaRecords.append(yotta)
             NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationKey.Drive.Yotta.Updated, object: nil,userInfo: ["yotta":yotta])
         }
     }
+    var yottaRecords : [Yotta] = []
     
     // MARK:- Methods : load remote data
     func loadYotta() {
@@ -40,6 +43,9 @@ class Driver: NSObject {
         }
     }
     func startReloadingYotta() {
+        
+        yottaRecords = []
+        
         if let reloadTimer = reloadTimer {
             reloadTimer.fire()
         }
